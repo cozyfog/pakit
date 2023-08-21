@@ -1,0 +1,1 @@
+main(args : *str) : i32 = 0;

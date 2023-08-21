@@ -96,7 +96,7 @@ TokenType advancedTokenType(const char *token) {
 void fullTokenType(Token *token) {
 	switch (token->type) {
 		case TOKEN_IDENTIFIER: {
-			token->type = Siz_advancedTokenType(token->data.c_str());
+			token->type = advancedTokenType(token->data.c_str());
 		} break;
 		
 		case TOKEN_AMPERSAND: {
@@ -109,16 +109,16 @@ void fullTokenType(Token *token) {
 
 vector<Token> generateTokens(string source) {
 	line_num = 1;
-	vector<Siz_Token> tokens;
+	vector<Token> tokens;
 	
 	const char *c_str = source.c_str();
-	Siz_Token full = {" ", TOKEN_WHITESPACE};
+	Token full = {" ", TOKEN_WHITESPACE};
 	
 	for (u64 i = 0; i < source.size() + 1; ++i) {
 		char c = c_str[i];
 		
-		Siz_Token curr;
-		curr.type = Siz_charTokenType(c);
+		Token curr;
+		curr.type = charTokenType(c);
 		
 		// FLOATS
 		if (full.type == TOKEN_INTENGER && curr.type == TOKEN_DOT) {
@@ -219,7 +219,7 @@ vector<Token> generateTokens(string source) {
 		// ADDING TO VECTOR
 		else {
 			curr.data = string({c});
-			Siz_fullTokenType(&full);
+			fullTokenType(&full);
 			tokens.push_back(full);
 			full = curr;
 		}

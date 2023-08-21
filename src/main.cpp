@@ -6,7 +6,7 @@
 
 i32 main(i32 argc, char **argv) {
   if (argc < 2) {
-    printf("siz_error: no input file given.");
+    printf("error: no input file given.");
     return 0;
   }
 
@@ -15,7 +15,11 @@ i32 main(i32 argc, char **argv) {
 	stream << file.rdbuf();
 	string source = stream.str();
 	
-	//vector<Siz_Token> tokens = Siz_generateTokens(source);
-	
+	vector<Token> tokens = generateTokens(source);
+  for (Token token : tokens) {
+    fprintf(stdout, "{%s : %d} ", token.data.c_str(), token.type);
+  }
+  fprintf(stdout, "\n");
+
 	return 0;
 }

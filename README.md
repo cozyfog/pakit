@@ -2,6 +2,8 @@
 ## *CURRENTLY UNFINISHED*
 - [x] Lexer/Tokenizer
 - [ ] AST Parser
+  - [x] base
+  - [ ] advanced
 - [ ] Optimizer
 - [ ] Interpreter
   - [ ] Optimizer

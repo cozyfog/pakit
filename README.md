@@ -14,7 +14,7 @@ Every function every variable are basicly equivalently parsed.
 For example:    
 
 a valid main function could be:  
-```main := 0;```  
+```main : i32 = 0;```  
 or:  
 ```main() : i32 = { 0; };```  
 and even:  
@@ -25,11 +25,10 @@ In this design the last value in a variable is returned.
 This allows us to use functional programming in a very efficient way where there are many one liners.  
 example:    
 ```
-add(a: i32, b: i32) : i32 = a+b;
+add(a: i32, b: i32) : i32 = a + b;
 
 main : i32 = {
-  print_i32(add(1, 4));
-  0;
+  printf("%d\n", add(1, 4));
 };
 ```    
 

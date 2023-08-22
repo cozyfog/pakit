@@ -1,6 +1,6 @@
 CC:=g++
 STD:=-std=c++17
-FLAGS:=-g -O2
+FLAGS:=-g -O0
 LIBS:=-lm
 OUTPUT:=-obin/pakit
 SRC:=src/*.cpp

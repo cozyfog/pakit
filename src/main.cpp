@@ -16,10 +16,15 @@ i32 main(i32 argc, char **argv) {
 	string source = stream.str();
 	
 	vector<Token> tokens = generateTokens(source);
-  for (Token token : tokens) {
-    fprintf(stdout, "{%s : %d} ", token.data.c_str(), token.type);
+  vector<Node> ast = generateAst(tokens);
+
+  for (Node n : ast) {
+    fprintf(stdout, "%d ->", n.type);
+    for (string s : n.data) {
+      fprintf(stdout, " %s", s.c_str());
+    }
+    fprintf(stdout, "\n");
   }
-  fprintf(stdout, "\n");
 
 	return 0;
 }

@@ -7,8 +7,8 @@ const char *alphabet = "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const char *digits = "01234561789";
 
 bool char_in_string(char c, const char *s) {
-	i32 i = -1;
-	while (s[++i] != c && s[i] != '\0');
+  i32 i = -1;
+  while (s[++i] != c && s[i] != '\0');
 	
 	return s[i] == c;
 }
@@ -160,8 +160,8 @@ vector<Token> generateTokens(string source) {
       }
 			
       full = curr;
-		}
-	}
+    }
+  }
 	
-	return tokens;
+  return tokens;
 }

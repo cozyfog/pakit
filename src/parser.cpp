@@ -18,6 +18,8 @@ vector<Node> generateAst(vector<Token> &tokens) {
           node.data = {last_token.data, next_token.data};
         }
         break;
+      case TOKEN_EQUALS:
+        break;
     }
 
     ast.push_back(node);

@@ -7,6 +7,7 @@
 enum NodeType {
   NODE_UNDEFINED,
   NODE_VARIABLE_NEW, // data[0] = variable_name, data[1] = variable_type
+  NODE_VARIABLE_SET,
 };
 
 struct Node {

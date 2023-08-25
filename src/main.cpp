@@ -26,5 +26,5 @@ i32 main(i32 argc, char **argv) {
     fprintf(stdout, "\n");
   }
 
-	return 0;
+  return 0;
 }

@@ -24,8 +24,10 @@ and even:
 
 In this design the last value in a variable is returned.    
 
+The functions can also be reassigned and rewritten do to them being variables aka. variable.    
+
 This allows us to use functional programming in a very efficient way where there are many one liners.  
-example:    
+example:   
 ```
 add(a: i32, b: i32) : i32 = a + b;
 
